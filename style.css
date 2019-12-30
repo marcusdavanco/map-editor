@@ -1,0 +1,69 @@
+.horizontal{
+    display: flex;
+    align-items: center;
+}
+
+.action-bar{
+    height: 4rem;
+}
+
+.action-buttons div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0.5rem 0 0;
+    }
+
+
+.animation-btn{
+    position: relative;
+    left: -60px;
+    top: -5px;
+}
+
+.rightmost{
+    position: relative;
+    left: -10rem;
+    bottom: 0.25rem;
+}
+
+.navbar{
+    margin: 0 0 0.5rem 0;
+}
+
+.navbar p{
+    margin: 0 0.5rem 0 0.5rem;
+    font-size: 1rem;
+}
+
+.hierarchy{
+    max-width: 50%;
+    width: 20%;
+    background-color: whitesmoke;
+    height: 30rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+
+.hierarchy p{
+    font-size: 1rem;
+    margin: 0.25rem 0 0.25rem 0  
+}
+
+.viewport{
+    background-color: black;
+    height: 30rem;
+    width: 60%
+}
+
+.properties{
+    max-width: 50%;
+    width: 20%;
+    background-color: whitesmoke;
+    height: 30rem;
+
+}
+
+.project-explorer{
+    height: 100vh;
+}

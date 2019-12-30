@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  <title>map-editor</title>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/photon/0.1.2-alpha/css/photon.css"
+  />
+  <script src="https://kit.fontawesome.com/ea59ed788b.js" crossorigin="anonymous"></script>
+</head>
+
+</head>
+<body>
+  <!-- Header -->
+  <div class="toolbar toolbar-header">
+    <h1 class="title"><strong>map-editor</strong></h1>
+  </div>
+  <!-- Action Toolbar -->
+  <div class="toolbar action-bar">
+    <!-- Toolbar -->
+    <div class="simple-toolbar navbar horizontal">
+      <p>File</p>
+      <p>Edit</p>
+      <p>Tools</p>
+      <p>Options</p>
+      <p>Help</p>
+    </div>
+    <div class="action-buttons">
+    <div class="leftmost">
+      <div class="horizontal">
+        <div class="btn-group">
+          <i class="btn fas fa-video"></i>
+          <i class="btn btn-default fas fa-arrows-alt"></i>
+          <i class="btn btn-default fas fa-hand-paper"></i>
+          <i class="btn btn-default fas fa-search-plus"></i>
+          <i class="btn btn-default fas fa-expand"></i>
+        </div>
+        <div class="btn-group">
+          <i class="btn fas fa-cube"></i>
+          <i class="btn btn-default fas fa-arrows-alt"></i>
+          <i class="btn btn-default fas fa-sync-alt"></i>
+          <i class="btn btn-default fas fa-expand-alt"></i>
+        </div>
+      </div>
+
+      <div class="animation-btn">
+        <div class="btn-group">
+          <i class="btn btn-default fas fa-play"></i>
+          <i class="btn btn-default fas fa-pause"></i>
+          <i class="btn btn-default fas fa-step-forward"></i>
+        </div>
+      </div>
+        <div class="rightmost">
+          <button class="btn btn-default">Layers <i class="fas fa-sort-down"></i></button>
+          <button class="btn btn-default">Layout <i class="fas fa-sort-down"></i></button>
+        </div>
+
+    </div>
+  </div>
+  <div class="horizontal">
+    <!-- Hierarchy -->
+    <div class="nav-group hierarchy">
+        <p class="nav-group-title">Fire Temple</p>
+        <p class="nav-group-item">Normal Gameplay</p>  
+        <p class="nav-group-item active">Room 1 (0x222E000)</p>
+        <p class="nav-group-item">Room 2 (0x2236000)</p>
+        <p class="nav-group-item">Room 3 (0x2243000)</p>
+        <p class="nav-group-item">Room 4 (0x2254000)</p>
+        <p class="nav-group-item">Room 5 (0x2257000)</p>
+        <p class="nav-group-item">Room 6 (0x225F000)</p>
+        <p class="nav-group-item">Room 7 (0x226A000)</p>
+        <p class="nav-group-item">Room 8 (0x2271000)</p>
+        <p class="nav-group-item">Room 9 (0x2275000)</p>
+        <p class="nav-group-item">Room 10 (0x227F000)</p>
+    </div>
+    <!-- Viewport -->
+    <div class="viewport"></div>
+    <!-- Properties -->
+    <div class="nav-group properties"></div>
+  </div>
+  <!-- Project Explorer -->
+  <footer class="toolbar toolbar-footer project-explorer"></footer>
+</body>

@@ -1,0 +1,33 @@
+Visualizador de árvore de diretórios (Hierarchy);
+  Quando inicia um novo projeto vai aparecer uma lista;
+  Automaticamente já criaria a Room0;
+  Dali você pode adicionar novas rooms;
+
+Quando selecionar uma room;
+  Do outro lado, um painel mostraria as propriedades dessa room,
+  modelo de funo, modelo da mes de colisão, lista de acors, etc;
+
+Project explorer;
+  Pasta contendo todas as "Scenes" do projeto do jogo que ficaria
+  abaixo;
+
+Menu do topo;
+ 1 - File, Edit, Etc;
+ 2 - Toolbar com opções de mover câmera, rotacionar, etc;
+
+Painel da esquerda;
+  Layout da Scene;
+
+No meio;
+  Viewport OpenGL com visualização do mapa;
+  Mudar perspectiva para modo 4x view;
+
+Do outro lado:
+  Painéis de propriedades do objeto selecionado;
+
+
+
+
+
+
+
