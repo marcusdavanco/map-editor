@@ -8,17 +8,15 @@
   />
   <script src="https://kit.fontawesome.com/ea59ed788b.js" crossorigin="anonymous"></script>
 </head>
-
-</head>
 <body>
   <!-- Header -->
-  <div class="toolbar toolbar-header">
-    <h1 class="title"><strong>map-editor</strong></h1>
-  </div>
   <!-- Action Toolbar -->
   <div class="toolbar action-bar">
+      <div class="header">
+        <h1 class="title"><strong>map-editor</strong></h1>
+      </div>
     <!-- Toolbar -->
-    <div class="simple-toolbar navbar horizontal">
+    <div class="navbar horizontal">
       <p>File</p>
       <p>Edit</p>
       <p>Tools</p>
@@ -42,14 +40,6 @@
           <i class="btn btn-default fas fa-expand-alt"></i>
         </div>
       </div>
-
-      <div class="animation-btn">
-        <div class="btn-group">
-          <i class="btn btn-default fas fa-play"></i>
-          <i class="btn btn-default fas fa-pause"></i>
-          <i class="btn btn-default fas fa-step-forward"></i>
-        </div>
-      </div>
         <div class="rightmost">
           <button class="btn btn-default">Layers <i class="fas fa-sort-down"></i></button>
           <button class="btn btn-default">Layout <i class="fas fa-sort-down"></i></button>
@@ -59,21 +49,36 @@
   </div>
   <div class="horizontal">
     <!-- Hierarchy -->
-    <div class="nav-group hierarchy">
-        <p class="nav-group-title">Fire Temple</p>
-        <p class="nav-group-item">Normal Gameplay</p>  
-        <p class="nav-group-item active">Room 1 (0x222E000)</p>
-        <p class="nav-group-item">Room 2 (0x2236000)</p>
-        <p class="nav-group-item">Room 3 (0x2243000)</p>
-        <p class="nav-group-item">Room 4 (0x2254000)</p>
-        <p class="nav-group-item">Room 5 (0x2257000)</p>
-        <p class="nav-group-item">Room 6 (0x225F000)</p>
-        <p class="nav-group-item">Room 7 (0x226A000)</p>
-        <p class="nav-group-item">Room 8 (0x2271000)</p>
-        <p class="nav-group-item">Room 9 (0x2275000)</p>
-        <p class="nav-group-item">Room 10 (0x227F000)</p>
+      <div class="hierarchy">
+        <div class="toolbar hierarchy-bar"> 
+          <div>
+            <p class="header-text"><i class="btn btn-default fas fa-bars"></i> Hierarchy</p>
+          </div>
+          <div class="hierarchy-second-row horizontal">
+            <button class="btn btn-default">New <i class="fas fa-sort-down"></i></button>
+            <form>
+                <input type="text" class="small-form-control">
+            </form>
+          </div>
+        </div>
+        <div class="nav-group hierarchy-content">
+          <p class="nav-group-item"><i class="fas fa-sort-down"></i> Fire Temple (0x2213000)</p> 
+          <p class="nav-group-item"><i class="fas fa-sort-down"></i> Normal Gameplay</p>  
+          <div class="children">
+          <p class="nav-group-item active">Room 1 (0x222E000)</p>
+          <p class="nav-group-item ">Room 2 (0x2236000)</p>
+          <p class="nav-group-item ">Room 3 (0x2243000)</p>
+          <p class="nav-group-item ">Room 4 (0x2254000)</p>
+          <p class="nav-group-item ">Room 5 (0x2257000)</p>
+          <p class="nav-group-item ">Room 6 (0x225F000)</p>
+          <p class="nav-group-item ">Room 7 (0x226A000)</p>
+          <p class="nav-group-item ">Room 8 (0x2271000)</p>
+          <p class="nav-group-item ">Room 9 (0x2275000)</p>
+          <p class="nav-group-item">Room 10 (0x227F000)</p>
+        </div>
+        </div>
     </div>
-    <!-- Viewport -->
+      <!-- Viewport -->
     <div class="viewport"></div>
     <!-- Properties -->
     <div class="nav-group properties"></div>
