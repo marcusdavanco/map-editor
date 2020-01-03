@@ -81,8 +81,74 @@
       <!-- Viewport -->
     <div class="viewport"></div>
     <!-- Properties -->
-    <div class="nav-group properties"></div>
+    <div class="hierarchy">
+      <div class="toolbar property-bar"> 
+        <div >
+          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> Inspector</p>
+        </div >
+        <div class="hierarchy-second-row horizontal" style="justify-content: space-around">
+          <div>
+          <i class="fas fa-cube fa-2x"></i>
+          <i class="fas fa-sort-down"></i>
+        </div>
+          <form>
+              <input type="checkbox" checked></input>
+              <input type="text" class="small-form-control" placeholder="MainCamera">
+              <input type="checkbox" checked>Static</input>
+              <i class="fas fa-sort-down"></i>
+          </form>
+        </div>
+        <div class="hierarchy-second-row horizontal">
+          <form class="horizontal" style="width: 100%; justify-content: space-around;">
+            <div class='horizontal'>
+              <p style="margin-right: 0.5rem;">Tag</p>
+              <select name="select">
+              <option value="MainCamera">MainCamera</option>
+              </select>
+            </div>
+            <div class="horizontal">
+              <p style="margin-right: 0.5rem;">Layer</p> 
+              <select name="select">
+                <option value="Default">Default</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="hierarchy-second-row horizontal" style="justify-content: center">
+          <p style="margin-right: 1.5rem">Prefab</p>
+          <div class="btn-group">
+            <button class="btn btn-default">Select</button>
+            <button class="btn btn-default" >Revert</button>
+            <button class="btn btn-default" >Apply</button>
+          </div>
+        </div>
+      </div>
+      <div class="toolbar property-bar"> 
+        <div >
+          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> Transform</p>
+          <form class="horizontal" style="margin: 0.33rem">
+            <p style="margin: 0 1rem 0 1rem">Position</p>
+            <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+          </form>
+          <form class="horizontal" style="margin: 0.33rem">
+            <p style="margin: 0 0.80rem 0 1rem">Rotation</p>
+            <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+          </form>
+          <form class="horizontal" style="margin: 0.33rem">
+            <p style="margin: 0 2rem 0 1rem" >Scale</p>
+            <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+            <p style="font-weight: bold;  margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+          </form>
+        </div >
+      </div>
+    </div>
   </div>
+   
   <!-- Project Explorer -->
   <footer class="toolbar toolbar-footer project-explorer"></footer>
 </body>

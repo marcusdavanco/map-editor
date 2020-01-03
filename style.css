@@ -85,8 +85,12 @@
     width: 20%;
     background-color: whitesmoke;
     height: 30rem;
-
 }
+
+.hierarchy-bar{
+    height:4rem
+}
+
 
 .project-explorer{
     height: 100vh;
