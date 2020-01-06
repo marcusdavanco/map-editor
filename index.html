@@ -81,10 +81,10 @@
       <!-- Viewport -->
     <div class="viewport"></div>
     <!-- Properties -->
-    <div class="hierarchy">
+    <div class="hierarchy" style="overflow-y: scroll; overflow-x: hidden">
       <div class="toolbar property-bar"> 
         <div >
-          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> Inspector</p>
+          <p class="header-text"><i class="btn btn-default fas fa-caret-right"></i> Inspector</p>
         </div >
         <div class="hierarchy-second-row horizontal" style="justify-content: space-around">
           <div>
@@ -125,9 +125,9 @@
       </div>
       <div class="toolbar property-bar"> 
         <div >
-          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> Transform</p>
+          <p class="header-text"><i class="btn btn-default fas fa-caret-right"></i> Transform</p>
           <form class="horizontal" style="margin: 0.33rem">
-            <p style="margin: 0 1rem 0 1rem">Position</p>
+            <p style="margin: 0 1rem 0 1rem">Position</p> 
             <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
             <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
             <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
@@ -145,6 +145,127 @@
             <p style="font-weight: bold;  margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
           </form>
         </div >
+        <div class="toolbar property-bar">
+          <div>
+            <p class="header-text"><i class="btn btn-default fas fa-caret-right"></i> <input type="checkbox" checked></input> Camera</p>
+          </div>
+          <div class="horizontal">
+            <p>Clear Flags</p>
+            <select>
+              <option>Skybox</option>
+            </select>
+          </div>
+          <div class="horizontal">
+            <p>Background</p>
+            <input type="color" checked>
+          </div>
+          <div class="horizontal">
+            <p>Culling Mask</p>
+            <select>
+              <option>Everything</option>
+            </select>
+          </div>
+          <div class="horizontal">
+            <p>Projection</p>
+            <select>
+              <option>Perspective</option>
+            </select>
+          </div>
+          <div class="horizontal">
+            <p>Field of View</p>
+            <input type="range">
+            <input type="text" style="width: 3rem;" placeholder=90>
+          </div>
+          <div>
+            <p>Clipping Planes</p>
+            <div class="horizontal">
+                <p>Near</p>
+                <input type="text" placeholder=0.15></input>
+              </div>
+              <div class="horizontal">
+              <p>Far</p>
+              <input type="text" placeholder=0.15></input>
+            </div>
+            </div>
+          </div>
+          <div>
+            <p>Viewport Rect</p>
+            <div class="horizontal">
+            <p>X</p>
+            <input placeholder=0 style="width: 3rem"></input>
+            <p>W</p>
+            <input placeholder=0 style="width: 3rem"></input>
+          </div>
+          <div class="horizontal">
+            <p>Y</p>
+            <input placeholder=0 style="width: 3rem"></input>
+            <p>H</p>
+            <input placeholder=0 style="width: 3rem"></input>
+            </div>
+          </div>
+          <div class="horizontal">
+            <p>Depth</p>
+            <input type="text" placeholder=-1></input>
+          </div>
+          <div class="horizontal">
+            <p>Rendering Path</p>
+            <select>
+              <option>
+                Use Player Settings
+              </option>
+            </select>
+          </div>
+          <div class="horizontal">
+            <p>Target Texture</p>
+            <input type="text" placeholder='None *Render Texture"'>
+          </div>
+          <div class="horizontal">
+            <p>Occlusion Culling</p>
+            <input type="checkbox" checked></input>
+          </div>
+          <div class="horizontal">
+            <p>HDR</p>
+            <input type="checkbox" ></input>
+          </div>
+          <div>
+            <p>Info: renders DepthNormals texture</p>
+          </div>
+        </div>
+        <div class="toolbar property-bar">
+          <div >
+            <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> GUI Layer</p>
+          </div>
+          </div>
+        <div class="toolbar property-bar">
+          <div >
+            <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Flare Layer</p>
+          </div>
+          </div>
+        <div class="toolbar property-bar">
+          <div >
+            <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Audio Listener</p>
+          </div>
+          </div>
+        <div class="toolbar property-bar">
+          <div >
+            <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Antialiasing(Script)</p>
+          </div>
+          </div>
+        <div class="toolbar property-bar">
+          <div >
+            <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Screen Space Ambient Occlusion</p>
+          </div>
+          </div>
+        <div class="toolbar property-bar" >
+          <div  >
+            <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Color Correction Curves (Script)</p>
+          </div>
+          </div>
+        <div class="toolbar property-bar">
+          <div >
+            <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Noise and Grain (Script)</p>
+          </div>
+          </div>
       </div>
     </div>
   </div>
