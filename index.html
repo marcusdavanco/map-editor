@@ -126,88 +126,91 @@
       <div class="toolbar property-bar"> 
         <div >
           <p class="header-text"><i class="btn btn-default fas fa-caret-right"></i> Transform</p>
-          <form class="horizontal" style="margin: 0.33rem">
+          <form class="horizontal" style="margin: 0 0.33rem 0 0 ; display: flex; justify-content: space-around">
             <p style="margin: 0 1rem 0 1rem">Position</p> 
-            <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
-            <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
-            <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
           </form>
-          <form class="horizontal" style="margin: 0.33rem">
+          <form class="horizontal" style="margin: 0 0.33rem 0 0 ; display: flex; justify-content: space-around">
             <p style="margin: 0 0.80rem 0 1rem">Rotation</p>
-            <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
-            <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
-            <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
           </form>
-          <form class="horizontal" style="margin: 0.33rem">
+          <form class="horizontal" style="margin: 0 0.33rem 0 0 ; display: flex; justify-content: space-around">
             <p style="margin: 0 2rem 0 1rem" >Scale</p>
-            <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
-            <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
-            <p style="font-weight: bold;  margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 3rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+            <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+            <p style="font-weight: bold;  margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
           </form>
         </div >
         <div class="toolbar property-bar">
           <div>
             <p class="header-text"><i class="btn btn-default fas fa-caret-right"></i> <input type="checkbox" checked></input> Camera</p>
           </div>
-          <div class="horizontal">
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
             <p>Clear Flags</p>
-            <select>
+            <select style="width: 9rem">
               <option>Skybox</option>
             </select>
           </div>
-          <div class="horizontal">
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
             <p>Background</p>
-            <input type="color" checked>
+            <input style="width: 9rem" type="color" checked>
           </div>
-          <div class="horizontal">
-            <p>Culling Mask</p>
-            <select>
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+            <p >Culling Mask</p>
+            <select style="width: 9rem">
               <option>Everything</option>
             </select>
           </div>
-          <div class="horizontal">
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
             <p>Projection</p>
-            <select>
+            <select style="width: 9rem">
               <option>Perspective</option>
             </select>
           </div>
-          <div class="horizontal">
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
             <p>Field of View</p>
-            <input type="range">
-            <input type="text" style="width: 3rem;" placeholder=90>
+            <input style="width: 9rem" type="range">
           </div>
-          <div>
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
             <p>Clipping Planes</p>
-            <div class="horizontal">
-                <p>Near</p>
-                <input type="text" placeholder=0.15></input>
+            <div class="horizontal" style="margin-left: 1.25rem;">
+                <p style="margin-right: 0.5rem">Near</p>
+                <input style="width: 2.5rem;" type="text" placeholder=0.15></input>
               </div>
-              <div class="horizontal">
-              <p>Far</p>
-              <input type="text" placeholder=0.15></input>
-            </div>
+              <div class="horizontal" style="margin-left: 1.25rem;">
+              <p style="margin-right: 0.5rem">Far</p>
+              <input style="width: 2.5rem;" type="text" placeholder=0.15></input>
             </div>
           </div>
-          <div>
+          <div class="horizontal" style="margin-left: 1.25rem">
             <p>Viewport Rect</p>
+            <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+            
+            <div style="display: flex; flex-direction: column">
             <div class="horizontal">
-            <p>X</p>
-            <input placeholder=0 style="width: 3rem"></input>
-            <p>W</p>
-            <input placeholder=0 style="width: 3rem"></input>
+            <p style="margin-right: 1rem">X</p>
+            <input placeholder=0 style="margin-right: 1rem; width: 2.5rem"></input>
+            <p style="margin-right: 1rem">W</p>
+            <input placeholder=0 style="width: 2.5rem"></input>
           </div>
-          <div class="horizontal">
-            <p>Y</p>
-            <input placeholder=0 style="width: 3rem"></input>
-            <p>H</p>
-            <input placeholder=0 style="width: 3rem"></input>
+            <div class="horizontal">
+            <p style="margin-right: 1rem">Y</p>
+            <input placeholder=0 style="margin-right: 1.2rem; width: 2.5rem"></input>
+            <p style="margin-right: 1rem">H</p>
+            <input placeholder=0 style="width: 2.5rem"></input>
             </div>
           </div>
-          <div class="horizontal">
+          </div>
+          </div>
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
             <p>Depth</p>
             <input type="text" placeholder=-1></input>
           </div>
-          <div class="horizontal">
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
             <p>Rendering Path</p>
             <select>
               <option>
@@ -215,20 +218,20 @@
               </option>
             </select>
           </div>
-          <div class="horizontal">
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
             <p>Target Texture</p>
-            <input type="text" placeholder='None *Render Texture"'>
+            <input style="width: 9rem" type="text" placeholder='None *Render Texture"'>
           </div>
-          <div class="horizontal">
-            <p>Occlusion Culling</p>
+          <div class="horizontal" style="margin-left: 1.25rem;">
+            <p style="margin-right: 0.75rem">Occlusion Culling</p>
             <input type="checkbox" checked></input>
           </div>
-          <div class="horizontal">
-            <p>HDR</p>
+          <div class="horizontal" style="margin-left: 1.25rem;">
+            <p style="margin-right: 0.75rem">HDR</p>
             <input type="checkbox" ></input>
           </div>
-          <div>
-            <p>Info: renders DepthNormals texture</p>
+          <div style="display: flex; justify-content: center">
+            <p >Info: renders DepthNormals texture</p>
           </div>
         </div>
         <div class="toolbar property-bar">
@@ -265,11 +268,26 @@
           <div >
             <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Noise and Grain (Script)</p>
           </div>
-          </div>
+        </div>
       </div>
+      <div style="background-color: #d3d1d3; display:flex; justify-content: center">
+      <button class="btn btn-large" style="margin: 1rem 0 1rem 0; width: 15rem"> Add Component</button>
+    </div>
     </div>
   </div>
    
   <!-- Project Explorer -->
-  <footer class="toolbar toolbar-footer project-explorer"></footer>
+  <footer class="toolbar toolbar-footer project-explorer">
+    <div class="tab-group">
+      <div class="tab-item active">
+        <span class="icon icon-cancel icon-close-tab"></span>
+        Project
+      </div>
+      <div class="tab-item">
+        <span class="icon icon-cancel icon-close-tab"></span>
+        Console
+      </div>
+    </div>
+  </footer>
+  
 </body>
