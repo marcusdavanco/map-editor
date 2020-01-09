@@ -127,7 +127,7 @@
         <div >
           <p class="header-text"><i class="btn btn-default fas fa-caret-right"></i> Transform</p>
           <form class="horizontal" style="margin: 0 0.33rem 0 0 ; display: flex; justify-content: space-around">
-            <p style="margin: 0 1rem 0 1rem">Position</p> 
+            <p style="margin: 0.5rem 1rem 0.5rem 1rem">Position</p> 
             <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
             <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
             <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
@@ -277,17 +277,209 @@
   </div>
    
   <!-- Project Explorer -->
-  <footer class="toolbar toolbar-footer project-explorer">
+  <div class="toolbar toolbar-footer project-explorer">
     <div class="tab-group">
       <div class="tab-item active">
-        <span class="icon icon-cancel icon-close-tab"></span>
         Project
       </div>
       <div class="tab-item">
-        <span class="icon icon-cancel icon-close-tab"></span>
         Console
       </div>
     </div>
-  </footer>
+    <div class="horizontal">  
+      <div style="width: 18.25rem; align-self: flex-start">
+        
+        <div style="background-color: whitesmoke">
+          <div class="toolbar"> 
+            <div class="hierarchy-second-row horizontal" style="height: 2rem">
+              <button class="btn btn-default">Create <i class="fas fa-sort-down"></i></button>
+              <form>
+                  <input type="text" class="small-form-control">
+              </form>
+            </div>
+            </div>
+            <div class="nav-group" style="overflow-y: scroll; height: 6.5rem">
+              <div class="nav-group-title">
+                <i style="margin-right: 0.25rem" class="fas fa-star"></i>Favorites
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="fas fa-search"></i>All Materials
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="fas fa-search"></i>All Models
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="fas fa-search"></i>All Prefabs
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="fas fa-search"></i>All Scripts
+              </div>
+              <div class="nav-group-title">
+                <i class="fas fa-sort-down"></i><i style="margin-right: 0.25rem" class="far fa-folder"></i>Assets
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i>_levels
+              </div>
+              <div class="nav-group-item active">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i><i style="margin-right: 0.25rem" class="fas fa-caret-right"></i>_scripts
+
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i>arch_forrest
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i>arch_modules
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i>arch_office
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i><i style="margin-right: 0.25rem" class="fas fa-caret-right"></i>arch_temple
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i><i style="margin-right: 0.25rem" class="fas fa-caret-right"></i>arch_test
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i>deco_fancy
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i><i style="margin-right: 0.25rem" class="fas fa-caret-right"></i>Editor
+              </div>
+              <div class="nav-group-item">
+                <i style="margin-right: 0.25rem" class="far fa-folder"></i>efex
+              </div>
+            </div>
+        </div>
+
+      </div>
+      <div style="width: 100%;overflow-y: auto; display: flex; flex-direction: column; justify-content: space-around">
+        <header class="toolbar toolbar-header horizontal" style="height: 2rem; display: flex">
+          <i style="margin-right: 0.25rem" class="far fa-folder"></i><p style="margin-right: 0.25rem" >Assets</p>
+          <i class="fas fa-caret-right"></i><p>_scripts</p>
+        </header>
+        <div style="display: flex; height: 5rem; width: 100%; overflow-y: scroll; flex-wrap: wrap">
+
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-folder fa-4x"></i>
+              <p style="margin: 0">Engine</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-folder fa-4x"></i>
+              <p style="margin: 0">Game</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">Build</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">Cog</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">Console</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">Deco</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">Draw</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">Flags</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">FPS_Counter</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">GameA</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">Gears</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">Gears_Test</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">Hit</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">HUD</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">HUD</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">HUD</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">HUD</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">HUD</p>
+            </div>
+          </div>
+          <div>
+            <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+              <i class="far fa-file fa-4x"></i>
+              <p style="margin: 0">HUD</p>
+            </div>
+          </div>
+
+        </div>
+        <footer class="toolbar toolbar-footer" style="display: flex; justify-content: flex-end">
+          <input style="margin-right: 1rem" type="range"/>
+        </footer>
+      
+      </div>
+  </div>
   
 </body>
