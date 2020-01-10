@@ -1,0 +1,472 @@
+<!-- Header -->
+  <!-- Action Toolbar -->
+  <div class="toolbar action-bar">
+    <div class="header">
+      <h1 class="title"><strong>map-editor</strong></h1>
+    </div>
+  <!-- Toolbar -->
+  <div class="navbar horizontal">
+    <p>File</p>
+    <p>Edit</p>
+    <p>Tools</p>
+    <p>Options</p>
+    <p>Help</p>
+  </div>
+  <div class="action-buttons">
+  <div class="leftmost">
+    <div class="horizontal">
+      <div class="btn-group">
+        <i class="btn fas fa-video"></i>
+        <i class="btn btn-default fas fa-arrows-alt"></i>
+        <i class="btn btn-default fas fa-hand-paper"></i>
+        <i class="btn btn-default fas fa-search-plus"></i>
+        <i class="btn btn-default fas fa-expand"></i>
+      </div>
+      <div class="btn-group">
+        <i class="btn fas fa-cube"></i>
+        <i class="btn btn-default fas fa-arrows-alt"></i>
+        <i class="btn btn-default fas fa-sync-alt"></i>
+        <i class="btn btn-default fas fa-expand-alt"></i>
+      </div>
+    </div>
+      <div class="rightmost">
+        <button class="btn btn-mini h-4">Layers <i class="fas fa-sort-down"></i></button>
+        <button class="btn btn-mini">Layout <i class="fas fa-sort-down"></i></button>
+      </div>
+
+  </div>
+</div>
+<div class="horizontal">
+  <!-- Hierarchy -->
+    <div class="hierarchy">
+      <div class="toolbar hierarchy-bar"> 
+        <div>
+          <p class="header-text"><i class="btn btn-default fas fa-bars"></i> Hierarchy</p>
+        </div>
+        <div class="hierarchy-second-row horizontal">
+          <button class="btn btn-default">New <i class="fas fa-sort-down"></i></button>
+          <form>
+              <input type="text" class="small-form-control">
+          </form>
+        </div>
+      </div>
+      <div class="nav-group hierarchy-content">
+        <p class="nav-group-item"><i class="fas fa-sort-down"></i> Fire Temple (0x2213000)</p> 
+        <p class="nav-group-item"><i class="fas fa-sort-down"></i> Normal Gameplay</p>  
+        <div class="children">
+        <p class="nav-group-item active">Room 1 (0x222E000)</p>
+        <p class="nav-group-item ">Room 2 (0x2236000)</p>
+        <p class="nav-group-item ">Room 3 (0x2243000)</p>
+        <p class="nav-group-item ">Room 4 (0x2254000)</p>
+        <p class="nav-group-item ">Room 5 (0x2257000)</p>
+        <p class="nav-group-item ">Room 6 (0x225F000)</p>
+        <p class="nav-group-item ">Room 7 (0x226A000)</p>
+        <p class="nav-group-item ">Room 8 (0x2271000)</p>
+        <p class="nav-group-item ">Room 9 (0x2275000)</p>
+        <p class="nav-group-item">Room 10 (0x227F000)</p>
+      </div>
+      </div>
+  </div>
+    <!-- Viewport -->
+  <div class="viewport"></div>
+  <!-- Properties -->
+  <div class="hierarchy" style="overflow-y: scroll; overflow-x: hidden">
+    <div class="toolbar property-bar"> 
+      <div >
+        <p class="header-text"><i class="btn btn-default fas fa-caret-right"></i> Inspector</p>
+      </div >
+      <div class="hierarchy-second-row horizontal" style="justify-content: space-around">
+        <div>
+        <i class="fas fa-cube fa-2x"></i>
+        <i class="fas fa-sort-down"></i>
+      </div>
+        <form>
+            <input type="checkbox" checked></input>
+            <input type="text" class="small-form-control" placeholder="MainCamera">
+            <input type="checkbox" checked>Static</input>
+            <i class="fas fa-sort-down"></i>
+        </form>
+      </div>
+      <div class="hierarchy-second-row horizontal">
+        <form class="horizontal" style="width: 100%; justify-content: space-around;">
+          <div class='horizontal'>
+            <p style="margin-right: 0.5rem;">Tag</p>
+            <select name="select">
+            <option value="MainCamera">MainCamera</option>
+            </select>
+          </div>
+          <div class="horizontal">
+            <p style="margin-right: 0.5rem;">Layer</p> 
+            <select name="select">
+              <option value="Default">Default</option>
+            </select>
+          </div>
+        </form>
+      </div>
+      <div class="hierarchy-second-row horizontal" style="justify-content: center">
+        <p style="margin-right: 1.5rem">Prefab</p>
+        <div class="btn-group">
+          <button class="btn btn-default">Select</button>
+          <button class="btn btn-default" >Revert</button>
+          <button class="btn btn-default" >Apply</button>
+        </div>
+      </div>
+    </div>
+    <div class="toolbar property-bar"> 
+      <div >
+        <p class="header-text"><i class="btn btn-default fas fa-caret-right"></i> Transform</p>
+        <form class="horizontal" style="margin: 0 0.33rem 0 0 ; display: flex; justify-content: space-around">
+          <p style="margin: 0.5rem 1rem 0.5rem 1rem">Position</p> 
+          <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+          <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+          <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+        </form>
+        <form class="horizontal" style="margin: 0 0.33rem 0 0 ; display: flex; justify-content: space-around">
+          <p style="margin: 0 0.80rem 0 1rem">Rotation</p>
+          <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+          <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+          <p style="font-weight: bold; margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+        </form>
+        <form class="horizontal" style="margin: 0 0.33rem 0 0 ; display: flex; justify-content: space-around">
+          <p style="margin: 0 2rem 0 1rem" >Scale</p>
+          <p style="font-weight: bold; margin-right: 0.25rem">X</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+          <p style="font-weight: bold; margin-right: 0.25rem">Y</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+          <p style="font-weight: bold;  margin-right: 0.25rem">Z</p><input type="text" style="margin-right: 0.5rem; width: 2rem" placeholder=0></input>
+        </form>
+      </div >
+      <div class="toolbar property-bar">
+        <div>
+          <p class="header-text"><i class="btn btn-default fas fa-caret-right"></i> <input type="checkbox" checked></input> Camera</p>
+        </div>
+        <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          <p>Clear Flags</p>
+          <select style="width: 9rem">
+            <option>Skybox</option>
+          </select>
+        </div>
+        <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          <p>Background</p>
+          <input style="width: 9rem" type="color" checked>
+        </div>
+        <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          <p >Culling Mask</p>
+          <select style="width: 9rem">
+            <option>Everything</option>
+          </select>
+        </div>
+        <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          <p>Projection</p>
+          <select style="width: 9rem">
+            <option>Perspective</option>
+          </select>
+        </div>
+        <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          <p>Field of View</p>
+          <input style="width: 9rem" type="range">
+        </div>
+        <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          <p>Clipping Planes</p>
+          <div class="horizontal" style="margin-left: 1.25rem;">
+              <p style="margin-right: 0.5rem">Near</p>
+              <input style="width: 2.5rem;" type="text" placeholder=0.15></input>
+            </div>
+            <div class="horizontal" style="margin-left: 1.25rem;">
+            <p style="margin-right: 0.5rem">Far</p>
+            <input style="width: 2.5rem;" type="text" placeholder=0.15></input>
+          </div>
+        </div>
+        <div class="horizontal" style="margin-left: 1.25rem">
+          <p>Viewport Rect</p>
+          <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          
+          <div style="display: flex; flex-direction: column">
+          <div class="horizontal">
+          <p style="margin-right: 1rem">X</p>
+          <input placeholder=0 style="margin-right: 1rem; width: 2.5rem"></input>
+          <p style="margin-right: 1rem">W</p>
+          <input placeholder=0 style="width: 2.5rem"></input>
+        </div>
+          <div class="horizontal">
+          <p style="margin-right: 1rem">Y</p>
+          <input placeholder=0 style="margin-right: 1.2rem; width: 2.5rem"></input>
+          <p style="margin-right: 1rem">H</p>
+          <input placeholder=0 style="width: 2.5rem"></input>
+          </div>
+        </div>
+        </div>
+        </div>
+        <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          <p>Depth</p>
+          <input type="text" placeholder=-1></input>
+        </div>
+        <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          <p>Rendering Path</p>
+          <select>
+            <option>
+              Use Player Settings
+            </option>
+          </select>
+        </div>
+        <div class="horizontal" style="margin: 0 1.25rem 0 1.25rem; justify-content: space-between">
+          <p>Target Texture</p>
+          <input style="width: 9rem" type="text" placeholder='None *Render Texture"'>
+        </div>
+        <div class="horizontal" style="margin-left: 1.25rem;">
+          <p style="margin-right: 0.75rem">Occlusion Culling</p>
+          <input type="checkbox" checked></input>
+        </div>
+        <div class="horizontal" style="margin-left: 1.25rem;">
+          <p style="margin-right: 0.75rem">HDR</p>
+          <input type="checkbox" ></input>
+        </div>
+        <div style="display: flex; justify-content: center">
+          <p >Info: renders DepthNormals texture</p>
+        </div>
+      </div>
+      <div class="toolbar property-bar">
+        <div >
+          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> GUI Layer</p>
+        </div>
+        </div>
+      <div class="toolbar property-bar">
+        <div >
+          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Flare Layer</p>
+        </div>
+        </div>
+      <div class="toolbar property-bar">
+        <div >
+          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Audio Listener</p>
+        </div>
+        </div>
+      <div class="toolbar property-bar">
+        <div >
+          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Antialiasing(Script)</p>
+        </div>
+        </div>
+      <div class="toolbar property-bar">
+        <div >
+          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Screen Space Ambient Occlusion</p>
+        </div>
+        </div>
+      <div class="toolbar property-bar" >
+        <div  >
+          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Color Correction Curves (Script)</p>
+        </div>
+        </div>
+      <div class="toolbar property-bar">
+        <div >
+          <p class="header-text"><i class="btn btn-default fas fa-sort-down"></i> <input type="checkbox" checked></input> Noise and Grain (Script)</p>
+        </div>
+      </div>
+    </div>
+    <div style="background-color: #d3d1d3; display:flex; justify-content: center">
+    <button class="btn btn-large" style="margin: 1rem 0 1rem 0; width: 15rem"> Add Component</button>
+  </div>
+  </div>
+</div>
+ 
+<!-- Project Explorer -->
+<div class="toolbar toolbar-footer project-explorer">
+  <div class="tab-group">
+    <div class="tab-item active">
+      Project
+    </div>
+    <div class="tab-item">
+      Console
+    </div>
+  </div>
+  <div class="horizontal">  
+    <div style="width: 18.25rem; align-self: flex-start">
+      
+      <div style="background-color: whitesmoke">
+        <div class="toolbar"> 
+          <div class="hierarchy-second-row horizontal" style="height: 2rem">
+            <button class="btn btn-default">Create <i class="fas fa-sort-down"></i></button>
+            <form>
+                <input type="text" class="small-form-control">
+            </form>
+          </div>
+          </div>
+          <div class="nav-group" style="overflow-y: scroll; height: 6.5rem">
+            <div class="nav-group-title">
+              <i style="margin-right: 0.25rem" class="fas fa-star"></i>Favorites
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="fas fa-search"></i>All Materials
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="fas fa-search"></i>All Models
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="fas fa-search"></i>All Prefabs
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="fas fa-search"></i>All Scripts
+            </div>
+            <div class="nav-group-title">
+              <i class="fas fa-sort-down"></i><i style="margin-right: 0.25rem" class="far fa-folder"></i>Assets
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i>_levels
+            </div>
+            <div class="nav-group-item active">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i><i style="margin-right: 0.25rem" class="fas fa-caret-right"></i>_scripts
+
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i>arch_forrest
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i>arch_modules
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i>arch_office
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i><i style="margin-right: 0.25rem" class="fas fa-caret-right"></i>arch_temple
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i><i style="margin-right: 0.25rem" class="fas fa-caret-right"></i>arch_test
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i>deco_fancy
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i><i style="margin-right: 0.25rem" class="fas fa-caret-right"></i>Editor
+            </div>
+            <div class="nav-group-item">
+              <i style="margin-right: 0.25rem" class="far fa-folder"></i>efex
+            </div>
+          </div>
+      </div>
+
+    </div>
+    <div style="width: 100%;overflow-y: auto; display: flex; flex-direction: column; justify-content: space-around">
+      <header class="toolbar toolbar-header horizontal" style="height: 2rem; display: flex">
+        <i style="margin-right: 0.25rem" class="far fa-folder"></i><p style="margin-right: 0.25rem" >Assets</p>
+        <i class="fas fa-caret-right"></i><p>_scripts</p>
+      </header>
+      <div style="display: flex; height: 5rem; width: 100%; overflow-y: scroll; flex-wrap: wrap">
+
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-folder fa-4x"></i>
+            <p style="margin: 0">Engine</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-folder fa-4x"></i>
+            <p style="margin: 0">Game</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">Build</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">Cog</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">Console</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">Deco</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">Draw</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">Flags</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">FPS_Counter</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">GameA</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">Gears</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">Gears_Test</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">Hit</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">HUD</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">HUD</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">HUD</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">HUD</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">HUD</p>
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 0.5rem 1rem 0.5rem 1rem">
+            <i class="far fa-file fa-4x"></i>
+            <p style="margin: 0">HUD</p>
+          </div>
+        </div>
+
+      </div>
+      <footer class="toolbar toolbar-footer" style="display: flex; justify-content: flex-end">
+        <input style="margin-right: 1rem" type="range"/>
+      </footer>
+    
+    </div>
+</div>

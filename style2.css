@@ -1,0 +1,97 @@
+.horizontal{
+    display: flex;
+    align-items: center;
+}
+
+.header-text{
+    position: relative;
+    left: 0.5rem;
+    font-weight: bold;
+}
+
+.header{
+    background-color: rgba(255,255,255,0.3)
+}
+
+.action-bar{
+    height: 5rem;
+}
+
+.action-buttons div{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0.5rem 0 0;
+    }
+
+.rightmost{
+    position: relative;
+    left: -10rem;
+    bottom: 0.25rem;
+}
+
+.navbar{
+    margin: 0 0 0.5rem 0;
+}
+
+.navbar p{
+    margin: 0 0.5rem 0 0.5rem;
+    font-size: 1rem;
+}
+
+.hierarchy{
+    max-width: 50%;
+    width: 20%;
+    background-color: whitesmoke;
+    height: 30rem;
+}
+
+.hierarchy-bar{
+    height:4rem
+}
+
+.hierarchy-second-row{
+    margin-left: 0.5rem;
+}
+
+.small-form-control{
+    height: 1.5rem;
+    width: 10rem;
+    margin-left: 0.25rem;
+}
+
+.hierarchy-content{
+    height: 26rem;
+    overflow-y: scroll;
+
+}
+
+.hierarchy p{
+    font-size: 1rem;
+    margin: 0.25rem 0 0.25rem 0;
+}
+
+.children{
+    margin-left: 30px;
+}
+
+.viewport{
+    background-color: black;
+    height: 30rem;
+    width: 60%
+}
+
+.properties{
+    max-width: 50%;
+    width: 20%;
+    background-color: whitesmoke;
+    height: 30rem;
+}
+
+.hierarchy-bar{
+    height:4rem
+}
+
+
+.project-explorer{
+    height: 100vh;
+}
