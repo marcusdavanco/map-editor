@@ -3,7 +3,7 @@
 }
 
 .h-hierarchy{
-    height: 29.5rem;
+    height: 27.5rem;
 }
 
 .w-viewport{
@@ -19,6 +19,22 @@
 }
 
 .h-properties{
-    height: 31.5rem;
+    height: 27.5rem;
 }
 
+.right-buttons{
+    position: relative;
+    left: -11.9rem
+}
+
+.h-project-explorer{
+    height: 17.5rem;
+}
+
+.h-explorer-window{
+  height: 16rem;  
+}
+
+.w-explorer-window{
+    width: 85.5vw;
+}
