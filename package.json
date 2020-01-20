@@ -1,0 +1,11 @@
+{
+  "name": "map-editor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/March0514s/map-editor.git",
+  "author": "Marcus Davanço <md.daves@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.12.0"
+  }
+}

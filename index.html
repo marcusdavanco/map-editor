@@ -1,332 +1,333 @@
 <!DOCTYPE html>
 <head>
-  <title>map-editor</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/photon/0.1.2-alpha/css/photon.css" rel="stylesheet"/>
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet"/>
-  <link href="/src/fontawesome-free-5.12.0-web/css/all.css" rel="stylesheet"></link>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/photon/0.1.2-alpha/css/photon.min.css' type='text/css' rel='stylesheet'/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.4/tailwind.min.css' type='text/css' rel='stylesheet'/>
+    <link href='/node_modules/@fortawesome/fontawesome-free/css/all.css' rel='stylesheet'></link>
+    <link href='css/style.css' type='text/css' rel='stylesheet'/>
 </head>
 <body>
-  <!-- Header -->
-  <header id="header" class="toolbar">
-    <div class="flex justify-between">
-      <div class="left-buttons">
-        <div class="btn-group">
-          <i class="btn fas fa-video"></i>
-          <i class="btn btn-default fas fa-arrows-alt"></i>
-          <i class="btn btn-default fas fa-hand-paper"></i>
-          <i class="btn btn-default fas fa-search-plus"></i>
-          <i class="btn btn-default fas fa-expand"></i>
-        </div>
-        <div class="btn-group">
-          <i class="btn fas fa-cube"></i>
+  <footer class= 'window'>
+    <!-- Component: Header -->
+    <header id="header" class="toolbar">
+      <div class="flex justify-between">
+        <div class="left-buttons">
+          <div class="btn-group">
+            <i class="btn fas fa-video"></i>
             <i class="btn btn-default fas fa-arrows-alt"></i>
-            <i class="btn btn-default fas fa-sync-alt"></i>
-            <i class="btn btn-default fas fa-expand-alt"></i>
+            <i class="btn btn-default fas fa-hand-paper"></i>
+            <i class="btn btn-default fas fa-search-plus"></i>
+            <i class="btn btn-default fas fa-expand"></i>
+          </div>
+          <div class="btn-group">
+            <i class="btn fas fa-cube"></i>
+              <i class="btn btn-default fas fa-arrows-alt"></i>
+              <i class="btn btn-default fas fa-sync-alt"></i>
+              <i class="btn btn-default fas fa-expand-alt"></i>
+          </div>
+        </div>
+        <div class="right-buttons" >
+          <button class="btn btn-default btn-mini ">Layers <i class="fas fa-sort-down"></i></button>
+          <button class="btn btn-default btn-mini ">Layout <i class="fas fa-sort-down"></i></button>
         </div>
       </div>
-      <div class="right-buttons" >
-        <button class="btn btn-default btn-mini ">Layers <i class="fas fa-sort-down"></i></button>
-        <button class="btn btn-default btn-mini ">Layout <i class="fas fa-sort-down"></i></button>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <div class="flex">
-    <!-- Hierarchy -->
-    <div id="hierarchy">
-      <div class="toolbar w-hierarchy h-8 flex flex-col h-16">
-        <span class="flex m-1">
-            <div class="flex">
-            <i class="mr-1 btn btn-default fas fa-bars"></i> 
-            <p class="font-bold flex w-full justify-center">Hierarchy</p>
-          </div>
-        </span>
-        <div class="mx-1 ">
-          <div class="flex items-center" style="height: 2rem">
-            <button class="btn btn-default h-6 mr-1">Create <i class="fas fa-sort-down"></i></button>
-            <form>
-                <input type="text" class="small-form-control">
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="h-hierarchy bg-gray-200 overflow-y-scroll" >
-        <div class="nav-group">
-          <p class="nav-group-item"><i class="fas fa-sort-down"></i> Fire Temple (0x2213000)</p> 
-          <p class="nav-group-item"><i class="fas fa-sort-down"></i> Normal Gameplay</p>  
-          <div class="ml-8">
-            <p class="nav-group-item active">Room 1 (0x222E000)</p>
-            <p class="nav-group-item ">Room 2 (0x2236000)</p>
-            <p class="nav-group-item ">Room 3 (0x2243000)</p>
-            <p class="nav-group-item ">Room 4 (0x2254000)</p>
-            <p class="nav-group-item ">Room 5 (0x2257000)</p>
-            <p class="nav-group-item ">Room 6 (0x225F000)</p>
-            <p class="nav-group-item ">Room 7 (0x226A000)</p>
-            <p class="nav-group-item ">Room 8 (0x2271000)</p>
-            <p class="nav-group-item ">Room 9 (0x2275000)</p>
-            <p class="nav-group-item">Room 10 (0x227F000)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Viewport -->
-    <div id="viewport">
-      <div class="bg-black h-viewport w-viewport">
-      </div>
-    </div>
-    <!-- Properties -->
-    <div id="properties" class="overflow-y-scroll overflow-x-hidden">
-      
-      <div class="h-properties bg-gray-200" >
-        <div>
-          <div class="toolbar w-properties h-8 flex items-center">
-            <span class="flex mr-1">
-                <i class="mx-1 btn btn-default fas fa-caret-right"></i> 
-                <p class="font-bold flex w-full justify-center">Inspector</p>
-            </span>
-          </div>
-          <div class="flex items-center">
-            <div class="m-2">
-              <i class="fas fa-cube fa-2x"></i>
-              <i class="fas fa-sort-down"></i>
-            </div>
-            <form>
-              <input type="checkbox" checked></input>
-              <input type="text" class="small-form-control" placeholder="MainCamera">
-              <input type="checkbox" checked>Static</input>
-              <i class="fas fa-sort-down"></i>
-            </form>
-          </div>
-          <div class="flex justify-center">
-            <form class="flex">
-              <div class="flex">
-                <p class="mr-2">Tag</p>
-                <select class="mr-10" name="select">
-                <option value="MainCamera">MainCamera</option>
-                </select>
-              </div>
-              <div class="flex">
-                <p class="mr-2">Layer</p> 
-                <select name="select">
-                  <option value="Default">Default</option>
-                </select>
-              </div>
-            </form>
-          </div>
-          <div class="flex my-3 justify-center">
-            <p class="mr-3">Prefab</p>
-            <div class="btn-group">
-              <button class="btn btn-default">Select</button>
-              <button class="btn btn-default" >Revert</button>
-              <button class="btn btn-default" >Apply</button>
-            </div>
-          </div>
-        </div>
-
-        <div>
-          <div class="toolbar w-properties h-8 flex items-center">
-              <span class="flex m-1">
-                  <i class="mr-1 btn btn-default fas fa-caret-right"></i> 
-                  <p class="font-bold flex w-full justify-center">Transform</p>
-              </span>
-          </div>
-          <div>
-            <form class="mr-1 flex justify-around">
-              <p  class="mx-6 my-2">Position</p> 
-              <p class="font-bold m-2">X</p><input type="text" class="m-2 w-8" placeholder=0></input>
-              <p class="font-bold m-2">Y</p><input type="text" class="m-2 w-8" placeholder=0></input>
-              <p class="font-bold m-2">Z</p><input type="text" class="m-2 w-8" placeholder=0></input>
-            </form>
-            <form class="mr-1 flex justify-around">
-              <p  class="ml-6 mr-6 my-2">Rotation</p> 
-              <p class="font-bold m-2">X</p><input type="text" class="m-2 w-8" placeholder=0></input>
-              <p class="font-bold m-2">Y</p><input type="text" class="m-2 w-8" placeholder=0></input>
-              <p class="font-bold m-2">Z</p><input type="text" class="m-2 w-8" placeholder=0></input>
-            </form>
-            <form class="mr-1 flex justify-around">
-              <p  class="ml-6 mr-10 my-2">Scale</p> 
-              <p class="font-bold m-2">X</p><input type="text" class="m-2 w-8" placeholder=0></input>
-              <p class="font-bold m-2">Y</p><input type="text" class="m-2 w-8" placeholder=0></input>
-              <p class="font-bold m-2">Z</p><input type="text" class="m-2 w-8" placeholder=0></input>
-            </form>
-          </div>
-        </div>
-
-        <div class="bg-gray-200">
-          <div class="toolbar w-properties h-8 flex items-center">
+    <div class= 'window-content'>
+      <div class= 'flex flex-1'>
+        <!-- Component: Hierarchy -->
+        <div class=' bg-gray-200 w-hierarchy flex flex-col flex-1' id='hierarchy'>
+          <div class="toolbar w-full h-8 flex flex-col h-16">
             <span class="flex m-1">
-                <i class="mr-1 btn btn-default fas fa-caret-right"></i> 
-                <p class="font-bold flex w-full justify-center">Camera</p>
+                <div class="flex">
+                <i class="mr-1 btn btn-default fas fa-bars"></i> 
+                <p class="font-bold flex w-full justify-center">Hierarchy</p>
+              </div>
             </span>
-          </div>
-          <div class="h-full">
-            
-            <div class="flex ml-5 my-3">
-              <p class="mr-12">Clear Flags</p>
-              <select class="ml-1 w-1/2">
-                <option>Skybox</option>
-              </select>
-            </div>
-
-            <div class="flex ml-5 my-3">
-              <p class="mr-12">Background</p>
-              <input class="ml-1 w-1/2" type="color" checked>
-            </div>
-
-            <div class="flex ml-5 my-3">
-              <p class="mr-12">Culling Mask</p>
-              <select class=" w-1/2">
-                <option>Everything</option>
-              </select>
-            </div>
-
-            <div class="flex ml-5 my-3">
-              <p class="mr-16">Projection</p>
-              <select class="w-1/2">
-                <option>Perspective</option>
-              </select>
-            </div>
-
-            <div class="flex ml-5 my-3">
-              <p class="mr-12">Field of View</p>
-              <input class="w-1/2" style="width: 9rem" type="range">
-            </div>
-
-            <div class="flex ml-5 my-3">
-              <p class="mr-8">Clipping Planes</p>
-              <div class="flex">
-                  <p class="mr-1">Near</p>
-                  <input class="w-8 h-6 mr-3" type="text" placeholder=0.15></input>
+            <div class="mx-1 ">
+              <div class="flex items-center" style="height: 2rem">
+                <button class="btn btn-default h-6 mr-1">Create <i class="fas fa-sort-down"></i></button>
+                <form>
+                    <input type="text" class="small-form-control">
+                </form>
               </div>
+            </div>
+          </div>
+          <div class="nav-group overflow-y-scroll flex-grow">
+            <p class="nav-group-item"><i class="fas fa-sort-down"></i> Fire Temple (0x2213000)</p> 
+            <p class="nav-group-item"><i class="fas fa-sort-down"></i> Normal Gameplay</p>  
+            <div class="ml-8">
+              <p class="nav-group-item active">Room 1 (0x222E000)</p>
+              <p class="nav-group-item ">Room 2 (0x2236000)</p>
+              <p class="nav-group-item ">Room 3 (0x2243000)</p>
+              <p class="nav-group-item ">Room 4 (0x2254000)</p>
+              <p class="nav-group-item ">Room 5 (0x2257000)</p>
+              <p class="nav-group-item ">Room 6 (0x225F000)</p>
+              <p class="nav-group-item ">Room 7 (0x226A000)</p>
+              <p class="nav-group-item ">Room 8 (0x2271000)</p>
+              <p class="nav-group-item ">Room 9 (0x2275000)</p>
+              <p class="nav-group-item">Room 10 (0x227F000)</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Component: Viewport -->
+        <div class='bg-black h-full w-viewport' id='viewport'>
+        </div>
+
+        <!-- Component: Properties -->
+        <div id='properties' class='overflow-y-scroll overflow-x-hidden w-properties flex-1' id='properties'>
+          <div class="h-properties bg-gray-200" >
+            <div>
+              <div class="toolbar w-full h-8 flex items-center">
+                <span class="flex mr-1">
+                    <i class="mx-1 btn btn-default fas fa-caret-right"></i> 
+                    <p class="font-bold flex w-full justify-center">Inspector</p>
+                </span>
+              </div>
+              <div class="flex items-center">
+                <div class="m-2">
+                  <i class="fas fa-cube fa-2x"></i>
+                  <i class="fas fa-sort-down"></i>
+                </div>
+                <form>
+                  <input type="checkbox" checked></input>
+                  <input type="text" class="small-form-control" placeholder="MainCamera">
+                  <input type="checkbox" checked>Static</input>
+                  <i class="fas fa-sort-down"></i>
+                </form>
+              </div>
+              <div class="flex justify-center">
+                <form class="flex">
+                  <div class="flex">
+                    <p class="mr-2">Tag</p>
+                    <select class="mr-10" name="select">
+                    <option value="MainCamera">MainCamera</option>
+                    </select>
+                  </div>
+                  <div class="flex">
+                    <p class="mr-2">Layer</p> 
+                    <select name="select">
+                      <option value="Default">Default</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+              <div class="flex my-3 justify-center">
+                <p class="mr-3">Prefab</p>
+                <div class="btn-group">
+                  <button class="btn btn-default">Select</button>
+                  <button class="btn btn-default" >Revert</button>
+                  <button class="btn btn-default" >Apply</button>
+                </div>
+              </div>
+            </div>
+    
+            <div>
+              <div class="toolbar w-full h-8 flex items-center">
+                  <span class="flex m-1">
+                      <i class="mr-1 btn btn-default fas fa-caret-right"></i> 
+                      <p class="font-bold flex w-full justify-center">Transform</p>
+                  </span>
+              </div>
+              <div>
+                <form class="mr-1 flex justify-around">
+                  <p  class="mx-6 my-2">Position</p> 
+                  <p class="font-bold m-2">X</p><input type="text" class="m-2 w-8" placeholder=0></input>
+                  <p class="font-bold m-2">Y</p><input type="text" class="m-2 w-8" placeholder=0></input>
+                  <p class="font-bold m-2">Z</p><input type="text" class="m-2 w-8" placeholder=0></input>
+                </form>
+                <form class="mr-1 flex justify-around">
+                  <p  class="ml-6 mr-6 my-2">Rotation</p> 
+                  <p class="font-bold m-2">X</p><input type="text" class="m-2 w-8" placeholder=0></input>
+                  <p class="font-bold m-2">Y</p><input type="text" class="m-2 w-8" placeholder=0></input>
+                  <p class="font-bold m-2">Z</p><input type="text" class="m-2 w-8" placeholder=0></input>
+                </form>
+                <form class="mr-1 flex justify-around">
+                  <p  class="ml-6 mr-10 my-2">Scale</p> 
+                  <p class="font-bold m-2">X</p><input type="text" class="m-2 w-8" placeholder=0></input>
+                  <p class="font-bold m-2">Y</p><input type="text" class="m-2 w-8" placeholder=0></input>
+                  <p class="font-bold m-2">Z</p><input type="text" class="m-2 w-8" placeholder=0></input>
+                </form>
+              </div>
+            </div>
+    
+            <div class="bg-gray-200">
+              <div class="toolbar w-full h-8 flex items-center">
+                <span class="flex m-1">
+                    <i class="mr-1 btn btn-default fas fa-caret-right"></i> 
+                    <p class="font-bold flex w-full justify-center">Camera</p>
+                </span>
+              </div>
+              <div class="h-full">
+                
+                <div class="flex ml-5 my-3">
+                  <p class="mr-12">Clear Flags</p>
+                  <select class="ml-1 w-1/2">
+                    <option>Skybox</option>
+                  </select>
+                </div>
+    
+                <div class="flex ml-5 my-3">
+                  <p class="mr-12">Background</p>
+                  <input class="ml-1 w-1/2" type="color" checked>
+                </div>
+    
+                <div class="flex ml-5 my-3">
+                  <p class="mr-12">Culling Mask</p>
+                  <select class=" w-1/2">
+                    <option>Everything</option>
+                  </select>
+                </div>
+    
+                <div class="flex ml-5 my-3">
+                  <p class="mr-16">Projection</p>
+                  <select class="w-1/2">
+                    <option>Perspective</option>
+                  </select>
+                </div>
+    
+                <div class="flex ml-5 my-3">
+                  <p class="mr-12">Field of View</p>
+                  <input class="w-1/2" style="width: 9rem" type="range">
+                </div>
+    
+                <div class="flex ml-5 my-3">
+                  <p class="mr-8">Clipping Planes</p>
+                  <div class="flex">
+                      <p class="mr-1">Near</p>
+                      <input class="w-8 h-6 mr-3" type="text" placeholder=0.15></input>
+                  </div>
+                    <div class="flex ml-3">
+                    <p class="mr-1">Far</p>
+                    <input class="w-8 h-6" type="text" placeholder=0.15></input>
+                  </div>
+                </div>
+    
                 <div class="flex ml-3">
-                <p class="mr-1">Far</p>
-                <input class="w-8 h-6" type="text" placeholder=0.15></input>
+                  <p class="ml-2 mr-12">Viewport Rect</p>
+                  <div class="flex mx-3 justify-between">
+                  
+                  <div class="flex flex-col">
+                  <div class="flex">
+                  <p class="font-bold mr-2">X</p>
+                  <input class="mr-6 w-8" placeholder=0></input>
+                  <p class="font-bold mr-2">W</p>
+                  <input class="mr-2 w-8" placeholder=0></input>
+                </div>
+    
+                <div class="flex mt-2">
+                  <p class="font-bold mr-2">Y</p>
+                  <input class="mr-6 w-8" placeholder=0></input>
+                  <p class="font-bold mr-3">H</p>
+                  <input class="w-8" placeholder=0></input>
+                </div>
+    
+    
+                </div>
+                </div>
+                </div>
+                
+                <div class="flex mx-5 justify-between">
+                  <p class="mt-4">Depth</p>
+                  <input class="w-1/2 mt-4 mb-4" type="text" placeholder=-1></input>
+                </div>
+                <div class="flex mx-5 justify-between">
+                  <p>Rendering Path</p>
+                  <select class="mb-4 w-1/2">
+                    <option>
+                      Use Player Settings
+                    </option>
+                  </select>
+                </div>
+                <div class="flex ml-5 justify-between">
+                  <p>Target Texture</p>
+                  <input class="w-32 mr-5" type="text" placeholder='None *Render Texture*'>
+                </div>
+                <div class="flex ml-5 my-2"">
+                  <p class="mr-8">Occlusion Culling</p>
+                  <input type="checkbox" checked></input>
+                </div>
+                <div class="flex ml-5">
+                  <p class="mr-24">H D R</p>
+                  <input type="checkbox" ></input>
+                </div>
+                <div class="flex justify-center">
+                  <p class="my-2" >Info: renders DepthNormals texture</p>
+                </div>
               </div>
             </div>
-
-            <div class="flex ml-3">
-              <p class="ml-2 mr-12">Viewport Rect</p>
-              <div class="flex mx-3 justify-between">
-              
-              <div class="flex flex-col">
-              <div class="flex">
-              <p class="font-bold mr-2">X</p>
-              <input class="mr-6 w-8" placeholder=0></input>
-              <p class="font-bold mr-2">W</p>
-              <input class="mr-2 w-8" placeholder=0></input>
+    
+            <div class="toolbar w-full h-8 flex items-center">
+              <span class="flex m-1">
+                  <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
+                  <p class="font-bold flex w-full justify-center">GUI Layer</p>
+              </span>
             </div>
-
-            <div class="flex mt-2">
-              <p class="font-bold mr-2">Y</p>
-              <input class="mr-6 w-8" placeholder=0></input>
-              <p class="font-bold mr-3">H</p>
-              <input class="w-8" placeholder=0></input>
+    
+            <div class="toolbar w-full h-8 flex items-center">
+              <span class="flex m-1">
+                  <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
+                  <p class="font-bold flex w-full justify-center">Flare Layer</p>
+              </span>
             </div>
-
-
+    
+            <div class="toolbar w-full h-8 flex items-center">
+              <span class="flex m-1">
+                  <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
+                  <p class="font-bold flex w-full justify-center">Audio Listener</p>
+              </span>
             </div>
+    
+            <div class="toolbar w-full h-8 flex items-center">
+              <span class="flex m-1">
+                  <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
+                  <p class="font-bold flex w-full justify-center">Antialising(Script)</p>
+              </span>
             </div>
+    
+            <div class="toolbar w-full h-8 flex items-center">
+              <span class="flex m-1">
+                  <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
+                  <p class="font-bold flex w-full justify-center">Screen Space Ambient Occlusion</p>
+              </span>
             </div>
-            
-            <div class="flex mx-5 justify-between">
-              <p class="mt-4">Depth</p>
-              <input class="w-1/2 mt-4 mb-4" type="text" placeholder=-1></input>
+    
+            <div class="toolbar w-full h-8 flex items-center">
+              <span class="flex m-1">
+                  <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
+                  <p class="font-bold flex w-full justify-center">Color Correction Curves(Script)</p>
+              </span>
             </div>
-            <div class="flex mx-5 justify-between">
-              <p>Rendering Path</p>
-              <select class="mb-4 w-1/2">
-                <option>
-                  Use Player Settings
-                </option>
-              </select>
+    
+            <div class="toolbar w-full h-8 flex items-center">
+              <span class="flex m-1">
+                  <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
+                  <p class="font-bold flex w-full justify-center">Noise and Grain(Script)</p>
+              </span>
             </div>
-            <div class="flex ml-5 justify-between">
-              <p>Target Texture</p>
-              <input class="w-32 mr-5" type="text" placeholder='None *Render Texture*'>
+    
+            <div class="bg-gray-200 flex justify-center h-full">
+                <button class="btn btn-default btn-large my-2 w-1/2"> Add Component</button>
             </div>
-            <div class="flex ml-5 my-2"">
-              <p class="mr-8">Occlusion Culling</p>
-              <input type="checkbox" checked></input>
-            </div>
-            <div class="flex ml-5">
-              <p class="mr-24">H D R</p>
-              <input type="checkbox" ></input>
-            </div>
-            <div class="flex justify-center">
-              <p class="my-2" >Info: renders DepthNormals texture</p>
-            </div>
-          </div>
         </div>
-
-        <div class="toolbar w-properties h-8 flex items-center">
-          <span class="flex m-1">
-              <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
-              <p class="font-bold flex w-full justify-center">GUI Layer</p>
-          </span>
+      </div>
         </div>
-
-        <div class="toolbar w-properties h-8 flex items-center">
-          <span class="flex m-1">
-              <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
-              <p class="font-bold flex w-full justify-center">Flare Layer</p>
-          </span>
-        </div>
-
-        <div class="toolbar w-properties h-8 flex items-center">
-          <span class="flex m-1">
-              <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
-              <p class="font-bold flex w-full justify-center">Audio Listener</p>
-          </span>
-        </div>
-
-        <div class="toolbar w-properties h-8 flex items-center">
-          <span class="flex m-1">
-              <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
-              <p class="font-bold flex w-full justify-center">Antialising(Script)</p>
-          </span>
-        </div>
-
-        <div class="toolbar w-properties h-8 flex items-center">
-          <span class="flex m-1">
-              <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
-              <p class="font-bold flex w-full justify-center">Screen Space Ambient Occlusion</p>
-          </span>
-        </div>
-
-        <div class="toolbar w-properties h-8 flex items-center">
-          <span class="flex m-1">
-              <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
-              <p class="font-bold flex w-full justify-center">Color Correction Curves(Script)</p>
-          </span>
-        </div>
-
-        <div class="toolbar w-properties h-8 flex items-center">
-          <span class="flex m-1">
-              <i class="mr-1 btn btn-default fas fa-caret-down"></i> 
-              <p class="font-bold flex w-full justify-center">Noise and Grain(Script)</p>
-          </span>
-        </div>
-
-        <div class="bg-gray-200 flex justify-center">
-          <button class="btn btn-default btn-large my-2 w-1/2"> Add Component</button>
-        </div>
+        
+      </div>
     </div>
-  </div>
-  </div>
-  <!-- Project Explorer -->
-  <div id="project-explorer">
+    <!-- Component: Project Explorer -->
+    <footer id='project-explorer' class='flex flex-col'>
       
       <div class="tab-group">
         <div class="tab-item active">Project</div>
         <div class="tab-item">Console</div>
       </div>
-
       
-      <div class="flex">
-        <div>
-          <div class="toolbar h-8 w-56 flex flex-col justify-center">
+      <div id='navigator-and-explorer'class='flex '>
+        <div id='navigador'>
+          
+          <div class="toolbar h-8 w-64 flex flex-col justify-center">
             <div class="flex h-4 items-center justify-around">
               <button class="w-20 btn btn-default btn-mini  ">Create <i class="fas fa-sort-down"></i></button>
               <form>
@@ -334,63 +335,70 @@
               </form>
             </div>
           </div>
-          <div class="bg-gray-200 h-project-explorer w-56 overflow-y-scroll">
-            <div class="nav-group-title">
-              <i class="mr-1 fas fa-star"></i>Favorites
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 fas fa-search"></i>All Materials
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 fas fa-search"></i>All Models
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 fas fa-search"></i>All Prefabs
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 fas fa-search"></i>All Scripts
-            </div>
-            <div class="nav-group-title">
-              <i class="fas fa-sort-down"></i><i class="mr-1 far fa-folder"></i>Assets
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 far fa-folder"></i>_levels
-            </div>
-            <div class="nav-group-item active">
-              <i class="mr-1 far fa-folder"></i><i class="mr-1 fas fa-caret-right"></i>_scripts
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 far fa-folder"></i>arch_forrest
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 far fa-folder"></i>arch_modules
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 far fa-folder"></i>arch_office
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 far fa-folder"></i><i class="mr-1 fas fa-caret-right"></i>arch_temple
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 far fa-folder"></i><i class="mr-1 fas fa-caret-right"></i>arch_test
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 far fa-folder"></i>deco_fancy
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 far fa-folder"></i><i class="mr-1 fas fa-caret-right"></i>Editor
-            </div>
-            <div class="nav-group-item">
-              <i class="mr-1 far fa-folder"></i>efex
+          
+          <div class='flex'>
+            <div class="bg-gray-200 h-24 w-64 overflow-y-scroll">
+              <div class="nav-group-title">
+                <i class="mr-1 fas fa-star"></i>Favorites
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 fas fa-search"></i>All Materials
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 fas fa-search"></i>All Models
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 fas fa-search"></i>All Prefabs
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 fas fa-search"></i>All Scripts
+              </div>
+              <div class="nav-group-title">
+                <i class="fas fa-sort-down"></i><i class="mr-1 far fa-folder"></i>Assets
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 far fa-folder"></i>_levels
+              </div>
+              <div class="nav-group-item active">
+                <i class="mr-1 far fa-folder"></i><i class="mr-1 fas fa-caret-right"></i>_scripts
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 far fa-folder"></i>arch_forrest
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 far fa-folder"></i>arch_modules
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 far fa-folder"></i>arch_office
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 far fa-folder"></i><i class="mr-1 fas fa-caret-right"></i>arch_temple
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 far fa-folder"></i><i class="mr-1 fas fa-caret-right"></i>arch_test
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 far fa-folder"></i>deco_fancy
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 far fa-folder"></i><i class="mr-1 fas fa-caret-right"></i>Editor
+              </div>
+              <div class="nav-group-item">
+                <i class="mr-1 far fa-folder"></i>efex
+              </div>
             </div>
           </div>
         </div>
-        <div>
-          <header class="toolbar w-explorer-window h-8 items-center flex"> 
+
+        <!-- Explorer window -->
+
+        <div id='explorer' class='h-explorer-window w-full flex flex-col' >
+          <header class="toolbar w-full items-center flex toolbar-padding"> 
             <i class="ml-2 mr-1 far fa-folder"></i><p class="mr-1" >Assets</p>
             <i class="mr-1 fas fa-caret-right"></i><p>_scripts</p>
           </header>
-          <div class="bg-gray-200 h-explorer-window overflow-y-scroll flex flex-wrap w-explorer-window">
+
+          <div class="bg-gray-200 h-explorer-window overflow-y-scroll flex flex-wrap w-full">
             <div>
               <div class="flex flex-col items-center mx-4 my-2">
                 <i class="far fa-folder fa-4x"></i>
@@ -476,10 +484,16 @@
               </div>
             </div>
           </div>
+
           <footer class="toolbar toolbar-footer flex justify-end">
             <input style="margin-right: 1rem" type="range"/>
           </footer>
+          
+
         </div>
       </div>
-    </div>
-</body> 
+
+    </footer>
+    
+  </div>
+</body>
