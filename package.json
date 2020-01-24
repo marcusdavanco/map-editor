@@ -1,11 +1,21 @@
 {
   "name": "map-editor",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "repository": "https://github.com/March0514s/map-editor.git",
   "author": "Marcus Davanço <md.daves@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "electron ."
+  },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.12.0"
+    "@fortawesome/fontawesome-free": "^5.12.0",
+    "dominant": "guipra/dominant",
+    "electron": "^7.1.10",
+    "photon": "connors/photon"
+  },
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "wzrd": "^1.5.0"
   }
 }
