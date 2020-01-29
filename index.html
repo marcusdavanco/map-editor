@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href='node_modules/photon/dist/css/photon.css' type='text/css' rel='stylesheet'/>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.1.4/tailwind.min.css' type='text/css' rel='stylesheet'/>
     <link href='node_modules/@fortawesome/fontawesome-free/css/all.css' rel='stylesheet'></link>
@@ -33,10 +34,10 @@
       </div>
     </header>
 
-    <div class= 'window-content'>
+  <div class= 'window-content overflow-x-hidden'>
       <div class= 'flex flex-1'>
         <!-- Component: Hierarchy -->
-        <div class=' bg-gray-200 w-hierarchy flex flex-col flex-1' id='hierarchy'>
+        <div class=' bg-gray-200 w-hierarchy flex flex-col flex-1 flex-shrink' id='hierarchy'>
           <div class="toolbar w-full h-8 flex flex-col h-16">
             <span class="flex m-1">
                 <div class="flex">
@@ -73,11 +74,11 @@
         </div>
 
         <!-- Component: Viewport -->
-        <div class='bg-black h-full w-viewport' id='viewport'>
+        <div class='bg-black h-full flex-grow flex flex-shrink-0' style="flex: 1 0 400px" id='viewport'>
         </div>
 
         <!-- Component: Properties -->
-        <div id='properties' class='overflow-y-scroll overflow-x-hidden w-properties flex-1' id='properties'>
+        <div id='properties' class='overflow-y-scroll overflow-x-hidden w-properties flex-1 flex-shrink-0' id='properties'>
           <div class="h-properties bg-gray-200" >
             <div>
               <div class="toolbar w-full h-8 flex items-center">

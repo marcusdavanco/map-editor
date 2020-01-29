@@ -6,7 +6,8 @@
   "author": "Marcus Davanço <md.daves@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "electron ."
+    "start": "electron .",
+    "dom": "wzrd app.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",

@@ -26,10 +26,10 @@ html, body{
     height: 40vh;
 } */
 
-.right-buttons{
+/* .right-buttons{
     position: relative;
     left: -11.9rem
-}
+} */
 
 .h-project-explorer{
     height: 24.68vh;
@@ -47,4 +47,24 @@ html, body{
 
 .toolbar-padding{
     padding: 10px 0
+}
+
+
+#header{
+    min-width: 720px;
+}
+
+#properties{
+    flex: 0 0 20rem;
+}
+
+#hierarchy{
+    flex: 0 0 17rem;
+}
+
+@media (max-width: 800px) {
+    #hierarchy{
+        display: none;
+    }
+
 }
